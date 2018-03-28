@@ -49,7 +49,12 @@ const yearAveragePositiveAverageTemps = (temps2015, temps2016) => {
 const fs = require('fs')
 
 const appearanceList = text => {
-  const regEx = /[a-zäöå']+/g
+  const regEx = /[a-zäöå']+/g // kaikki kirjaimet ja '-merkki joka myös esiintyy teksissä sanojen osana
+
+  /* vaihtoehtoisesti regex /[^\s,.:;?!]+/g 
+    joka poistaa välimerkit
+  */
+
   // kai nyt toLowerCase funktiota saa käyttää kans
   const list = text
     .toLowerCase()
