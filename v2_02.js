@@ -65,8 +65,9 @@ console.log()
 
 // Teht 4 
 
-const Immutable = require('immutable')
-const set1 = Immutable.Set(['punainen', 'vihreä', 'keltainen'])
+const {Set, Seq} = require('immutable')
+
+const set1 = Set(['punainen', 'vihreä', 'keltainen'])
 const set2 = set1.add('ruskea')
 const set3 = set2.add('ruskea')
 
@@ -92,7 +93,7 @@ console.log()
 
 console.log("Laiska evaluointi, käydään läpi vain tarvittavat arvot: ")
 
-const immutableArr = Immutable.Seq(arr)
+const immutableArr = Seq(arr)
 
 console.log(neliot(immutableArr).get(2))
 console.log()
