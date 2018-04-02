@@ -1,0 +1,23 @@
+{
+  "name": "ratkaisut",
+  "version": "1.0.0",
+  "description": "",
+  "main": "v1_01.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexPasharin/Funktionaalinen_ohjelmointi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexPasharin/Funktionaalinen_ohjelmointi/issues"
+  },
+  "homepage": "https://github.com/AlexPasharin/Funktionaalinen_ohjelmointi#readme",
+  "dependencies": {
+    "immutable": "^3.8.2"
+  }
+}
