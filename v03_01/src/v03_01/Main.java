@@ -3,14 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package funk_prog_v03_01;
+package v03_01;
 
 import java.util.*;
 import java.util.function.Function;
 import static java.util.stream.Collectors.toList;
-import static funk_prog_v03_01.Dish.menu;
+import static v03_01.Dish.menu;
 import java.io.IOException;
-import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.stream.Collectors;
@@ -20,7 +19,7 @@ import java.util.stream.Stream;
  *
  * @author aleksandrpasharin
  */
-public class Funk_prog_v03_01 {
+public class Main {
 
     /**
      * @param args the command line arguments
@@ -88,7 +87,7 @@ public class Funk_prog_v03_01 {
         System.out.println();
         
         // Teht 5
-        String [] words = Files.lines(Paths.get("src/data/Kalevala.txt"))
+        String [] words = Files.lines(Paths.get("../data/Kalevala.txt"))
             .reduce("", (a, b) -> a + b)
             .toLowerCase()
             .split("[\\s,.:;?!]+");
