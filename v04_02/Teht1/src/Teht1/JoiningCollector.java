@@ -1,9 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package v04_02;
+package Teht1;
 
 import java.util.EnumSet;
 import java.util.Set;
@@ -54,7 +49,10 @@ public class JoiningCollector implements Collector<CharSequence, StringBuffer, S
 
     @Override
     public Set<Characteristics> characteristics() {
-        return EnumSet.of(Characteristics.CONCURRENT, Characteristics.UNORDERED);
+        return EnumSet.of(
+            Characteristics.CONCURRENT,
+            Characteristics.UNORDERED
+        );
     }
     
 }

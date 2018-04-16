@@ -1,4 +1,4 @@
-package v04_02;
+package Teht1;
 
 public class Omena{
     
@@ -17,8 +17,7 @@ public class Omena{
     public String getVari(){
         return vari;
     }
-    
-    
+        
     @Override
     public String toString(){
         return "Omena: " + vari + ":" + paino + " g";

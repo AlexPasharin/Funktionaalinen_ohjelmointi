@@ -1,4 +1,4 @@
-package v04_02;
+package Teht1;
 
 import java.util.stream.Collector;
 
