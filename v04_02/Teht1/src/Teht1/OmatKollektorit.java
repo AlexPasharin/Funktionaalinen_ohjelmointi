@@ -18,6 +18,5 @@ public class OmatKollektorit {
     
     public static Collector<CharSequence, ?, String> joining(CharSequence delimiter, CharSequence prefix, CharSequence suffix) {
         return new JoiningCollector(delimiter, prefix, suffix);
-    }
-    
+    }    
 }

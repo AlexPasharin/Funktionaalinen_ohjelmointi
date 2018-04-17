@@ -5,6 +5,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
 import java.util.stream.Collector;
+import java.util.stream.Stream;
 
 public class Main {
 
@@ -49,8 +50,12 @@ public class Main {
         
         List<String> listOfWords = Arrays.asList(words);
         
-        String result = listOfWords.stream().collect(OmatKollektorit.joining(" "));
-        String parallelResult = listOfWords.parallelStream().collect(OmatKollektorit.joining(" "));
+        Stream<String> nonParallelStream = listOfWords.stream();
+        Stream<String> parallelStream = listOfWords.parallelStream();
+        
+        String result = nonParallelStream.collect(OmatKollektorit.joining(" "));
+        String parallelResult = parallelStream.collect(OmatKollektorit.joining(" "));
+        
         
         System.out.println("\nNon parallel joining:\n");
         System.out.println(result);
@@ -60,8 +65,10 @@ public class Main {
         
         /* Ero ei-rinnakkaisen ja rinnakaisen välillä näkyy ainoastaan kun collectorin characteristics sisältävät kumpikin 
             UNORDERED ja CONCURRENT
-        */
-        
+            
+            Kokeilin käyttää myös StringBuilderia, mutta se ei toimii rinnakkaisessa tapauksessa 
+            kun sekä UNORDERED että CONCURRENT ovat voimassa. Johtuu varmaan siitä, että StringBuilder ei ole thread-safe
+        */       
     }   
     
     private static String joinApples(Collector<CharSequence, ?, String> collector) {
